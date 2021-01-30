@@ -37,7 +37,7 @@ li {
 
 h1,h2,h3,h4,h5,h6 {
     font-size: 1em;
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Lora', sans-serif;
     margin-bottom: 0.5em;
 }
 
@@ -59,19 +59,6 @@ body, table, form, input, select, option, textarea{
 p, ul, ol {
     padding-bottom: 1.5em;
 }
-
-// ul, ol {
-//     padding-left: 2em;
-// } 
-
-// // ul ul, ol ol, ul ol, ol ul {
-// //     padding-top: 0.5em;
-// //     padding-bottom: 0.5em;
-// // }
-
-// // ul > li > ul > li {
-// //     list-style-type: armenian;
-// // }
 
 ol > li > ol > li {
     list-style-type: upper-roman;

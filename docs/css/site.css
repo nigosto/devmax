@@ -32,7 +32,7 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Lora', sans-serif;
   margin-bottom: 0.5em; }
 
 h1 {
@@ -258,6 +258,28 @@ blockquote .author:before {
             transform: translate(-50%, -50%);
             height: 100%;
             width: auto; }
+  .site-home-contacts {
+    background-color: var(--green-color);
+    padding: 4rem 10%;
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary-color); }
+    .site-home-contacts-text h4 {
+      font-size: 2.5em; }
+    .site-home-contacts-link {
+      margin-top: 1rem; }
+      .site-home-contacts-link-btn {
+        font-size: 2em;
+        font-family: sans-serif;
+        font-weight: bold;
+        border-radius: 1.875em;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 1rem 2rem;
+        transition: background 0.2s ease-in; }
+        .site-home-contacts-link-btn:hover {
+          color: var(--secondary-color);
+          background-color: var(--primary-color); }
   .site-home-reviews {
     margin-top: 2rem; }
     .site-home-reviews-list {
@@ -315,6 +337,15 @@ blockquote .author:before {
       order: 2; }
     .site-home-features-list-feature.right-feature .site-home-features-list-feature-text {
       text-align: right; }
+  .site-home-contacts {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+    .site-home-contacts-link {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
   .site-home-reviews-list {
     flex-direction: row;
     align-items: start; }
