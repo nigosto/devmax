@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.site-main {
+    flex-grow: 1;
+}
+.wrapper {
+    padding: 0.5rem 10%;
+}
+@import 'header';

@@ -1,0 +1,98 @@
+.hamburger_checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &:checked + .site-header > .site-header-navigation {
+        opacity: 1;
+        
+    }
+
+    &:checked + .site-header .site-header-navigation .site-header-navigation-list {
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+        height: auto;
+        max-height: 12rem;
+    }
+}
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    position: sticky;
+
+    &-logo {
+        &-img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+        }
+    }
+
+    &-hamburger-label {
+        margin-left: auto;
+    }
+
+    &-navigation {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        background-color: var(--primary-color);
+        
+
+        &-list {
+            padding-bottom: 0;
+            max-height: 0;
+
+            &-item {
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                &:first-child {
+                    border-top: 1px solid white;
+                }
+                &:not(:last-child) {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@include mq(960px) {
+    .site-header {
+        &-logo {
+            &-img {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        &-hamburger-label {
+            display: none;
+        }
+        &-navigation {
+            position: static;
+            width: auto;
+            opacity: 1;
+            margin-left: auto;
+
+            &-list {
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 0;
+
+                &-item {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}
+
