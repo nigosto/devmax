@@ -6,6 +6,8 @@
 
     &:checked + .site-header .site-header-navigation .site-header-navigation-list {
         max-height: 12rem;
+        z-index: 2000;
+
     }
 }
 .site-header {
@@ -40,6 +42,8 @@
             transition: max-height 0.5s ease-in;
             height: auto;
             max-height: 0rem;
+            position: relative;
+            z-index: 10;
 
             &-item {
                 padding: 1rem 0;

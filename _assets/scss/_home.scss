@@ -1,7 +1,11 @@
 .site-home {
+    display: flex;
+    flex-direction: column;
+
     &-jumbotron {
         position: relative;
         overflow: hidden;
+        z-index: -1;
 
         &:before {
             display: block;
@@ -43,8 +47,86 @@
                     transition: background 0.2s ease-in;
 
                     &:hover {
-                        background: var(--primary-color);
+                        background: var(--green-color);
                         color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &-features {
+        margin-top: 3rem;
+
+        &-title {
+            text-align: center;
+
+            &:after {
+                display: block;
+                content: "";
+                height: 3px;
+                background-color: var(--green-color);
+                width: 5rem;
+                margin: auto;
+                margin-top: 1rem;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            &-feature {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &-text {
+                    order: 2;
+                    text-align: center;
+
+                    p {
+                        padding: 0;
+                        margin-bottom: 1rem ;
+                    }
+
+                    a {
+                        background: var(--secondary-color);
+                        color: var(--primary-color);
+                        padding: 0.5rem 1rem;
+                        
+                        border-radius: 0.5em;
+                        transition: background 0.2s ease-in;
+
+                        &:hover {
+                            background: var(--green-color);
+                            color: var(--secondary-color);
+                        }
+                    }
+                }
+
+                &-img {
+                    margin: 2rem 0;
+                    order: 1;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+
+                    &:before {
+                        display: block;
+                        content: "";
+                        padding-top: 50%;
+                    }
+
+                    img {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 100%;
+                        width: auto;
                     }
                 }
             }
@@ -80,6 +162,31 @@
             &::before {
                 background-image: url("https://c0.wallpaperflare.com/preview/210/504/976/adult-chair-company-design.jpg");
                 padding-top: 30%;
+            }
+        }
+
+        &-features {
+            &-list {
+                &-feature {
+                    flex-direction: row;
+
+                    &.left-feature {
+                        .site-home-features-list-feature-text {
+                            order: 1;
+                            text-align: left;
+                        }
+
+                        .site-home-features-list-feature-img {
+                            order: 2;
+                        }
+                    }
+
+                    &.right-feature {
+                        .site-home-features-list-feature-text {
+                            text-align: right;
+                        }
+                    }
+                }
             }
         }
     }

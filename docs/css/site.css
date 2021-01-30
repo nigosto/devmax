@@ -1,6 +1,7 @@
 :root {
   --primary-color: #323232;
-  --secondary-color: #eee; }
+  --secondary-color: #eee;
+  --green-color: #3bba9c; }
 
 * {
   margin: 0;
@@ -94,7 +95,8 @@ blockquote .author:before {
   left: 0;
   opacity: 0; }
   .hamburger_checkbox:checked + .site-header .site-header-navigation .site-header-navigation-list {
-    max-height: 12rem; }
+    max-height: 12rem;
+    z-index: 2000; }
 
 .site-header {
   background-color: var(--primary-color);
@@ -120,7 +122,9 @@ blockquote .author:before {
       overflow: hidden;
       transition: max-height 0.5s ease-in;
       height: auto;
-      max-height: 0rem; }
+      max-height: 0rem;
+      position: relative;
+      z-index: 10; }
       .site-header-navigation-list-item {
         padding: 1rem 0;
         display: flex;
@@ -155,44 +159,101 @@ blockquote .author:before {
         margin-left: 2rem;
         border: none !important; } }
 
-.site-home-jumbotron {
-  position: relative;
-  overflow: hidden; }
-  .site-home-jumbotron:before {
-    display: block;
-    content: "";
-    background-image: url("https://maxbytetech.com/wp-content/uploads/2016/12/Business-Wallpaper-HD-Wallpapers-Backgrounds-of-Your-Choice-3.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 35%;
-    padding-top: 70%; }
-  .site-home-jumbotron-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); }
-    .site-home-jumbotron-content-text {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: var(--secondary-color);
+.site-home {
+  display: flex;
+  flex-direction: column; }
+  .site-home-jumbotron {
+    position: relative;
+    overflow: hidden;
+    z-index: -1; }
+    .site-home-jumbotron:before {
+      display: block;
+      content: "";
+      background-image: url("https://maxbytetech.com/wp-content/uploads/2016/12/Business-Wallpaper-HD-Wallpapers-Backgrounds-of-Your-Choice-3.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 50% 35%;
+      padding-top: 70%; }
+    .site-home-jumbotron-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4); }
+      .site-home-jumbotron-content-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--secondary-color);
+        text-align: center; }
+        .site-home-jumbotron-content-text-header {
+          font-size: 1em; }
+        .site-home-jumbotron-content-text .btn-contact {
+          background: var(--secondary-color);
+          color: var(--primary-color);
+          padding: 1rem 2rem;
+          border-radius: 0.5em;
+          margin-top: 2rem;
+          transition: background 0.2s ease-in; }
+          .site-home-jumbotron-content-text .btn-contact:hover {
+            background: var(--green-color);
+            color: var(--secondary-color); }
+  .site-home-features {
+    margin-top: 3rem; }
+    .site-home-features-title {
       text-align: center; }
-      .site-home-jumbotron-content-text-header {
-        font-size: 1em; }
-      .site-home-jumbotron-content-text .btn-contact {
-        background: var(--secondary-color);
-        color: var(--primary-color);
-        padding: 1rem 2rem;
-        border-radius: 0.5em;
-        margin-top: 2rem;
-        transition: background 0.2s ease-in; }
-        .site-home-jumbotron-content-text .btn-contact:hover {
-          background: var(--primary-color);
-          color: var(--secondary-color); }
+      .site-home-features-title:after {
+        display: block;
+        content: "";
+        height: 3px;
+        background-color: var(--green-color);
+        width: 5rem;
+        margin: auto;
+        margin-top: 1rem; }
+    .site-home-features-list {
+      display: flex;
+      flex-direction: column; }
+      .site-home-features-list-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .site-home-features-list-feature-text {
+          order: 2;
+          text-align: center; }
+          .site-home-features-list-feature-text p {
+            padding: 0;
+            margin-bottom: 1rem; }
+          .site-home-features-list-feature-text a {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5em;
+            transition: background 0.2s ease-in; }
+            .site-home-features-list-feature-text a:hover {
+              background: var(--green-color);
+              color: var(--secondary-color); }
+        .site-home-features-list-feature-img {
+          margin: 2rem 0;
+          order: 1;
+          width: 100%;
+          overflow: hidden;
+          position: relative; }
+          .site-home-features-list-feature-img:before {
+            display: block;
+            content: "";
+            padding-top: 50%; }
+          .site-home-features-list-feature-img img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: auto; }
 
 @media screen and (min-width: 480px) {
   .site-home-jumbotron::before {
@@ -207,4 +268,13 @@ blockquote .author:before {
 @media screen and (min-width: 750px) {
   .site-home-jumbotron::before {
     background-image: url("https://c0.wallpaperflare.com/preview/210/504/976/adult-chair-company-design.jpg");
-    padding-top: 30%; } }
+    padding-top: 30%; }
+  .site-home-features-list-feature {
+    flex-direction: row; }
+    .site-home-features-list-feature.left-feature .site-home-features-list-feature-text {
+      order: 1;
+      text-align: left; }
+    .site-home-features-list-feature.left-feature .site-home-features-list-feature-img {
+      order: 2; }
+    .site-home-features-list-feature.right-feature .site-home-features-list-feature-text {
+      text-align: right; } }
