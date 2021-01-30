@@ -1,0 +1,86 @@
+.site-home {
+    &-jumbotron {
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            display: block;
+            content: "";
+            background-image: url("https://maxbytetech.com/wp-content/uploads/2016/12/Business-Wallpaper-HD-Wallpapers-Backgrounds-of-Your-Choice-3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 50% 35%;
+            padding-top: 70%;
+        }
+
+        &-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+
+            &-text {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: var(--secondary-color);
+                text-align: center;
+
+                &-header {
+                    font-size: 1em;
+                }
+
+                .btn-contact {
+                    background: var(--secondary-color);
+                    color: var(--primary-color);
+                    padding: 1rem 2rem;
+                    border-radius: 0.5em;
+                    margin-top: 2rem;
+                    transition: background 0.2s ease-in;
+
+                    &:hover {
+                        background: var(--primary-color);
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(480px) {
+    .site-home {
+        &-jumbotron {
+            &::before {
+                padding-top: 50%;
+            }
+
+            &-content {
+                &-text {
+                    &-header {
+                        @for $i from 1 through 3 {
+                            &:nth-child(#{$i}) {
+                                font-size: #{2 - $i / 4}em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(750px) {
+    .site-home {
+        &-jumbotron {
+            &::before {
+                background-image: url("https://c0.wallpaperflare.com/preview/210/504/976/adult-chair-company-design.jpg");
+                padding-top: 30%;
+            }
+        }
+    }
+}
