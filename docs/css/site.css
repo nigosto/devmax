@@ -89,6 +89,17 @@ blockquote .author:before {
 .wrapper {
   padding: 0.5rem 10%; }
 
+.section-title {
+  text-align: center; }
+  .section-title:after {
+    display: block;
+    content: "";
+    height: 3px;
+    background-color: var(--green-color);
+    width: 5rem;
+    margin: auto;
+    margin-top: 1rem; }
+
 .hamburger_checkbox {
   position: absolute;
   top: 0;
@@ -104,7 +115,9 @@ blockquote .author:before {
   display: flex;
   align-items: center;
   position: -webkit-sticky;
-  position: sticky; }
+  position: sticky;
+  z-index: 100;
+  box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.5); }
   .site-header-logo-img {
     width: 5rem;
     height: 5rem;
@@ -124,7 +137,8 @@ blockquote .author:before {
       height: auto;
       max-height: 0rem;
       position: relative;
-      z-index: 10; }
+      z-index: 10;
+      box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.5); }
       .site-header-navigation-list-item {
         padding: 1rem 0;
         display: flex;
@@ -154,7 +168,8 @@ blockquote .author:before {
       overflow: visible;
       max-height: -webkit-max-content;
       max-height: -moz-max-content;
-      max-height: max-content; }
+      max-height: max-content;
+      box-shadow: none; }
       .site-header-navigation-list-item {
         margin-left: 2rem;
         border: none !important; } }
@@ -164,8 +179,7 @@ blockquote .author:before {
   flex-direction: column; }
   .site-home-jumbotron {
     position: relative;
-    overflow: hidden;
-    z-index: -1; }
+    overflow: hidden; }
     .site-home-jumbotron:before {
       display: block;
       content: "";
@@ -203,16 +217,6 @@ blockquote .author:before {
             color: var(--secondary-color); }
   .site-home-features {
     margin-top: 3rem; }
-    .site-home-features-title {
-      text-align: center; }
-      .site-home-features-title:after {
-        display: block;
-        content: "";
-        height: 3px;
-        background-color: var(--green-color);
-        width: 5rem;
-        margin: auto;
-        margin-top: 1rem; }
     .site-home-features-list {
       display: flex;
       flex-direction: column; }

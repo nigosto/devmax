@@ -1,0 +1,13 @@
+.section-title {
+    text-align: center;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 3px;
+        background-color: var(--green-color);
+        width: 5rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}

@@ -5,7 +5,6 @@
     &-jumbotron {
         position: relative;
         overflow: hidden;
-        z-index: -1;
 
         &:before {
             display: block;
@@ -57,20 +56,6 @@
 
     &-features {
         margin-top: 3rem;
-
-        &-title {
-            text-align: center;
-
-            &:after {
-                display: block;
-                content: "";
-                height: 3px;
-                background-color: var(--green-color);
-                width: 5rem;
-                margin: auto;
-                margin-top: 1rem;
-            }
-        }
 
         &-list {
             display: flex;
