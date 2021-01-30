@@ -100,6 +100,13 @@ blockquote .author:before {
     margin: auto;
     margin-top: 1rem; }
 
+.site-footer {
+  text-align: center;
+  padding: 2rem 10%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: 0px -7px 12px -5px rgba(0, 0, 0, 0.5); }
+
 .hamburger_checkbox {
   position: absolute;
   top: 0;
