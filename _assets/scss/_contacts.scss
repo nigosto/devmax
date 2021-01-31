@@ -1,0 +1,150 @@
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 435px;
+    width: 100%;
+    box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.3);
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 435px;
+    width: 100%;
+}
+
+.site-contacts {
+    display: flex;
+    flex-direction: column;
+
+    &-info {
+        margin-top: 3rem;
+
+        &-cards {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+
+            &-card {
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+
+                &-img {
+                    font-size: 4em;
+                    color: var(--primary-color);
+                }
+
+                &-title {
+                }
+
+                &-text {
+                    text-align: center;
+
+                    h5 {
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font-family: sans-serif;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-message {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+
+            &-input {
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    padding: 0.5rem;
+                    border: 0;
+                    background: var(--secondary-color);
+                    color: var(--primary-color);
+                    border-radius: 0.3rem;
+                    border-color: var(--primary-color);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            input[type="submit"] {
+                background: var(--primary-color);
+                color: var(--secondary-color);
+                font-size: 1.2em;
+                font-weight: bold;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                cursor: pointer;
+                transition: background 0.2s ease-in;
+                border-radius: 0.3rem;
+                border: 0;
+
+                &:hover {
+                    background: var(--green-color);
+                }
+            }
+        }
+    }
+}
+
+@include mq(480px) {
+    .site-contacts {
+        &-info {
+            &-cards {
+                flex-direction: row;
+
+                &-card {
+                    flex: 1 0 30%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-message {
+            margin-top: 3rem;
+
+            &-form {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                &-input {
+                    @for $i from 1 through 6 {
+                        &:nth-child(#{$i}) {
+                            flex: 1 0 35%;
+                        }
+
+                        &:nth-child(odd) {
+                            margin-right: 2rem;
+                        }
+                    }
+                    
+                    &:nth-child(7) {
+                        flex: 1 0 100%;
+                    }
+                }
+
+                input[type="submit"] {
+                    flex: 1 0 100%;
+                }
+            }
+        }
+    }
+}
