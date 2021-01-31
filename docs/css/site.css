@@ -129,6 +129,10 @@ blockquote .author:before {
     width: 5rem;
     height: 5rem;
     border-radius: 50%; }
+  .site-header-title {
+    margin: 0;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem; }
   .site-header-hamburger-label {
     margin-left: auto; }
   .site-header-navigation {
@@ -156,6 +160,8 @@ blockquote .author:before {
           border-top: 1px solid white; }
         .site-header-navigation-list-item:not(:last-child) {
           border-bottom: 1px solid white; }
+        .site-header-navigation-list-item a:hover {
+          color: var(--green-color); }
 
 @media screen and (min-width: 480px) {
   .site-header-logo-img {

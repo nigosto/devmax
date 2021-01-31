@@ -27,6 +27,12 @@
         }
     }
 
+    &-title {
+        margin: 0;
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
     &-hamburger-label {
         margin-left: auto;
     }
@@ -60,6 +66,10 @@
                 }
                 &:not(:last-child) {
                     border-bottom: 1px solid white;
+                }
+
+                a:hover {
+                    color: var(--green-color);
                 }
             }
         }
