@@ -133,6 +133,8 @@ blockquote .author:before {
     margin: 0;
     margin-left: 2rem;
     margin-bottom: 0.5rem; }
+    .site-header-title a:hover {
+      color: var(--green-color); }
   .site-header-hamburger-label {
     margin-left: auto; }
   .site-header-navigation {

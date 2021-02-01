@@ -31,6 +31,10 @@
         margin: 0;
         margin-left: 2rem;
         margin-bottom: 0.5rem;
+
+        a:hover {
+            color: var(--green-color)
+        }
     }
 
     &-hamburger-label {
