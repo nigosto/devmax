@@ -480,3 +480,68 @@ blockquote .author:before {
         flex: 1 0 100%; }
       .site-contacts-message-form input[type="submit"] {
         flex: 1 0 100%; } }
+
+.section-title {
+  font-size: 3em; }
+
+.site-services {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .site-services-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem; }
+    .site-services-list-item {
+      box-shadow: 2px 4px 25px -2px rgba(0, 0, 0, 0.3);
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem; }
+      .site-services-list-item-img {
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        height: 80%;
+        border-radius: 0.3rem;
+        box-shadow: 2px 4px 20px -2px rgba(0, 0, 0, 0.3);
+        background-color: var(--green-color); }
+        .site-services-list-item-img:before {
+          display: block;
+          content: "";
+          padding-top: 50%; }
+        .site-services-list-item-img img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: auto; }
+      .site-services-list-item-text {
+        width: 50%; }
+        .site-services-list-item-text a {
+          background: var(--secondary-color);
+          color: var(--primary-color);
+          padding: 0.5rem 1rem;
+          border-radius: 0.5em;
+          transition: background 0.2s ease-in; }
+          .site-services-list-item-text a:hover {
+            background: var(--green-color);
+            color: var(--secondary-color); }
+
+@media screen and (min-width: 1200px) {
+  .site-services-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .site-services-list-item {
+      width: 45%;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .site-services-list-item-img {
+        left: -15%;
+        transition: transform 0.3s ease; }
+        .site-services-list-item-img:hover {
+          transform: scale(1.1); } }
